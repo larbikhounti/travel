@@ -9,7 +9,7 @@ $navBar = " <nav class='navbar navbar-expand-lg navbar-light bg-light'>
       <div class='collapse navbar-collapse  ' id='navbarNav'>
         <ul class='navbar-nav w-100'>
           <li class='nav-item btn fw-1'>
-            <a class='nav-link active' aria-current='page' href='res/../acc.php'>Accueil</a>
+            <a class='nav-link active' aria-current='page' href='res/../index.php'>Accueil</a>
           </li>
           <li class='nav-item btn fw-normal'>
             <a class='nav-link' href='travel/../trajets.php'>Trajets</a>

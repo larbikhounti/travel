@@ -1,6 +1,6 @@
 <?php
 include "./static/navbar.php";
-
+// author : mohamed khounti
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ include "./static/navbar.php";
         </div>
         <div class="primary-buttons">
             <a href="#" class="">
-                <button class="btn btn-success book-now shadow">réserver</button>
+                <button class="btn btn-success book-now shadow">voyager avec nous</button>
             </a>
         </div>
     </div>
