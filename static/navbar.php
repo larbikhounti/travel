@@ -12,7 +12,7 @@ $navBar = " <nav class='navbar navbar-expand-lg navbar-light bg-light'>
             <a class='nav-link active' aria-current='page' href='res/../acc.php'>Accueil</a>
           </li>
           <li class='nav-item btn fw-normal'>
-            <a class='nav-link' href='#'>Trajets</a>
+            <a class='nav-link' href='travel/../trajets.php'>Trajets</a>
           </li>
           <li class='nav-item btn fw-normal'>
             <a class='nav-link' href='#'>Reservation</a>
