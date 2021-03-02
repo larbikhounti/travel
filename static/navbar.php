@@ -19,10 +19,10 @@ $navBar = " <nav class='navbar navbar-expand-lg navbar-light bg-light'>
           </li>
           <div class='left-bar '>
             <li class='nav-item '>
-              <a class='nav-link' href='res/../signup.php' ><button class='btn btn-success fw-bold'>inscription</button> </a> 
+              <a class='nav-link' href='travel/../signup.php' ><button class='btn btn-success fw-bold'>inscription</button> </a> 
             </li>
             <li class='nav-item '>
-              <a  class='nav-link ' href='' ><button class='btn btn-white fw-bold'>Connection</button></a> 
+              <a  class='nav-link ' href='travel/../connection.php' ><button class='btn btn-white fw-bold'>Connection</button></a> 
             </li>
           </div>
         </ul>
