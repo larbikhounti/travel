@@ -24,26 +24,37 @@ include "./static/navbar.php";
     
         <form action="" method="post" class="sign-up-form container ">
             <div class="fullname  col-md-12 container row ">
-            <h1>inscreption</h1>
-                <div class="name col-md-6 ">
-                    <label class="fw-bold" for="name">Nom</label>
-                    <input class="form-control" type="text" name="name" id="name">
+                <h1>inscreption</h1>
+                    <div class="name col-md-6 ">
+                        <label class="fw-bold" for="name">Nom</label>
+                        <input class="form-control" type="text" name="name" id="name">
+                    </div>
+                    <div class="lastname col-md-6 ">
+                        <label  class="fw-bold"  for="lastname">prenom</label>
+                        <input class="form-control" type="text" name="lastname" id="lastname">
+                    </div>
                 </div>
-                <div class="lastname col-md-6 ">
-                    <label  class="fw-bold"  for="lastname">prenom</label>
-                    <input class="form-control" type="text" name="lastname" id="lastname">
+                <div class="dateob-tele col-md-12 container row">
+                    <div class="telefone col-md-6">
+                        <label  class="fw-bold" for="phone">telephone</label>
+                        <input class="form-control" type="phone" name="phone" id="phone">
+                    </div>
+                    <div class="date_b col-md-6">
+                        <label  class="fw-bold" for="date_b">date de necc</label>
+                        <input  class="form-control date_b"type="date" name="date_b" id="date_b">
+                    </div>
                 </div>
             </div>
-            <div class="dateob-tele col-md-12 container row">
-                <div class="telefone col-md-6">
-                    <label  class="fw-bold" for="phone">telephone</label>
-                    <input class="form-control" type="phone" name="phone" id="phone">
-                </div>
-                <div class="date_b col-md-6">
-                    <label  class="fw-bold" for="date_b">date de necc</label>
-                    <input  class="form-control date_b"type="date" name="date_b" id="date_b">
-                </div>
-            </div>
+                    <div class="container row">
+                        <div class="password col-md-6">
+                            <label  class="fw-bold" for="password">mot de pass</label>
+                            <input  class="form-control password"type="password" name="password" id="password">
+                        </div>
+                        <div class="submit col-md-6 p-4">
+                            <button class = "btn btn-primary w-100" type="submit">Validé</button>
+                        </div>
+                    </div>
+       
 
 
         </form>
