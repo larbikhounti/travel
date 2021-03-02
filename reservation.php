@@ -20,37 +20,10 @@ include "./static/navbar.php";
 <body>
     <?php echo ($navBar); ?>
 
-    <form action="" method="post" class="travel-times-from container mt-5">
-        <div class="fullname  col-md-12 container  ">
-            <h1>Rechercher Trajets</h1>
-            <div class="col-md-12 container row">
-                <div class="name col-md-6">
-                    <label class="fw-bold" for="Email">Ville Depart</label>
-                    <select class="form-select" aria-label="Default select example" required>
-                        <option value="1">tanger</option>
-                        <option value="2">meknes</option>
-                        <option value="3">taza</option>
-                    </select>
-                </div>
-                <div class="lastname col-md-6">
-                    <label class="fw-bold" for="password">Ville d'arrive</label>
-                    <select class="form-select" aria-label="Default select example" required>
-                        <option value="1">casablanca</option>
-                        <option value="2">rabat</option>
-                        <option value="3">fes</option>
-                    </select>
-                </div>
-            </div>
-        </div>
 
-        <div class="container row">
-            <div class="submit col-md-6 p-4">
-                <button class="btn btn-primary w-100" type="submit">cherche</button>
-            </div>
-        </div>
-    </form>
-    <div class="table-of-times container text-center">
-        <table class="table table-hover">
+    <div class="table-of-times container text-center mt-5">
+        <h1>Mon Reservations</h1>
+        <table class="table table-hover mt-4">
             <thead>
                 <tr>
                     <th scope="col">code Voyage</th>
@@ -59,7 +32,7 @@ include "./static/navbar.php";
                     <th scope="col">ville depart</th>
                     <th scope="col">ville arrivee</th>
                     <th scope="col">prix</th>
-                    <th scope="col">Action</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -70,7 +43,7 @@ include "./static/navbar.php";
                     <td>tanger</td>
                     <td>casablanca</td>
                     <td>155 DH</td>
-                    <td><button class="btn btn-success btn-sm fw-bold w-100">reserver</button></td>
+                    <td><button class="btn btn-danger btn-sm fw-bold w-100">annuler</button></td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
@@ -79,7 +52,7 @@ include "./static/navbar.php";
                     <td>tanger</td>
                     <td>casablanca</td>
                     <td>155 DH</td>
-                    <td><button class="btn btn-success btn-sm fw-bold w-100">reserver</button></td>
+                    <td><button class="btn btn-danger btn-sm fw-bold w-100">annuler</button></td>
                 </tr>
             </tbody>
         </table>

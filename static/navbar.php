@@ -15,7 +15,7 @@ $navBar = " <nav class='navbar navbar-expand-lg navbar-light bg-light'>
             <a class='nav-link' href='travel/../trajets.php'>Trajets</a>
           </li>
           <li class='nav-item btn fw-normal'>
-            <a class='nav-link' href='#'>Reservation</a>
+            <a class='nav-link' href='travel/../reservation.php'>Reservation</a>
           </li>
           <div class='left-bar '>
             <li class='nav-item '>
