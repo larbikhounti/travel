@@ -115,13 +115,12 @@ include "./static/navbar.php";
                     </select>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">annuler</button>
+                    <button type="button" class="btn btn-secondary annuler" data-dismiss="modal">annuler</button>
                     <button type="button" class="btn btn-success">Reserver</button>
                 </div>
             </div>
         </div>
     </div>
-
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
@@ -133,6 +132,9 @@ include "./static/navbar.php";
     <script type="text/javascript">
     $(".reserver").click(() => {
         $("#exampleModal").modal("show");
+    })
+    $(".annuler").click(() => {
+        $("#exampleModal").modal("hide");
     })
     </script>
 

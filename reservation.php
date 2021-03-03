@@ -45,7 +45,7 @@ include "./static/navbar.php";
                     <td>tanger</td>
                     <td>casablanca</td>
                     <td>155 DH</td>
-                    <td><button class="btn btn-success btn-sm fw-bold w-100">reserver</button></td>
+                    <td><button class="btn btn-danger btn-sm fw-bold w-100">Annuler</button></td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
@@ -54,7 +54,7 @@ include "./static/navbar.php";
                     <td>tanger</td>
                     <td>casablanca</td>
                     <td>155 DH</td>
-                    <td><button class="btn btn-success btn-sm fw-bold w-100">reserver</button></td>
+                    <td><button class="btn btn-danger btn-sm fw-bold w-100">Annuler</button></td>
                 </tr>
             </tbody>
         </table>
