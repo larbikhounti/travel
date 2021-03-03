@@ -32,6 +32,7 @@ include "./static/navbar.php";
                     <th scope="col">heure arrivee</th>
                     <th scope="col">ville depart</th>
                     <th scope="col">ville arrivee</th>
+                    <th scope="col">Date</th>
                     <th scope="col">prix</th>
                     <th scope="col"></th>
                 </tr>
@@ -44,7 +45,7 @@ include "./static/navbar.php";
                     <td>tanger</td>
                     <td>casablanca</td>
                     <td>155 DH</td>
-                    <td><button class="btn btn-danger btn-sm fw-bold w-100">annuler</button></td>
+                    <td><button class="btn btn-success btn-sm fw-bold w-100">reserver</button></td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
@@ -53,7 +54,7 @@ include "./static/navbar.php";
                     <td>tanger</td>
                     <td>casablanca</td>
                     <td>155 DH</td>
-                    <td><button class="btn btn-danger btn-sm fw-bold w-100">annuler</button></td>
+                    <td><button class="btn btn-success btn-sm fw-bold w-100">reserver</button></td>
                 </tr>
             </tbody>
         </table>
