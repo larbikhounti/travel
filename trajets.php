@@ -20,8 +20,8 @@ include "./static/navbar.php";
 <body>
     <?php echo ($navBar); ?>
 
-    <form action="" method="post" class="travel-times-from container mt-5">
-        <div class="fullname  col-md-12 container  ">
+    <form action="" method="post" class="travel-times-from container  mt-5">
+        <div class="fullname col-md-12 container  ">
             <h1>Rechercher Trajets</h1>
             <div class="col-md-12 container row">
                 <div class="Ville-Depart col-md-6">
@@ -41,20 +41,21 @@ include "./static/navbar.php";
                     </select>
                 </div>
             </div>
+            <div class="col-md-12 container row">
+                <div class="submit col-md-6 p-4">
+                    <label for="date">Date De Voyage</label>
+                    <input class="form-control" type="date" name="date" id="date" required>
+                </div>
+                <div class="submit col-md-6 p-5">
+                    <button class="btn btn-primary w-100" type="submit">cherche</button>
+                </div>
+            </div>
         </div>
 
-        <div class="container row">
-            <div class="submit col-md-6 p-4">
-                <label for="date">Date De Voyage</label>
-                <input class="form-control" type="date" name="date" id="date" required>
-            </div>
-            <div class="submit col-md-6 p-5">
-                <button class="btn btn-primary w-100" type="submit">cherche</button>
-            </div>
-        </div>
+
     </form>
     <div class="table-of-times container text-center">
-        <table class="table table-hover">
+        <table class="table table-hover ">
             <thead>
                 <tr>
                     <th scope="col">code Voyage</th>
@@ -64,7 +65,6 @@ include "./static/navbar.php";
                     <th scope="col">ville arrivee</th>
                     <th scope="col">prix</th>
                     <th scope="col">action</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -77,8 +77,6 @@ include "./static/navbar.php";
                     <td>155 DH</td>
                     <td><button class="btn btn-success btn-sm fw-bold w-100 reserver" data-toggle="modal"
                             data-target="#exampleModal">reserver</button></td>
-
-
                 </tr>
                 <tr>
                     <th scope="row">1</th>
@@ -89,8 +87,6 @@ include "./static/navbar.php";
                     <td>155 DH</td>
                     <td><button class="btn btn-success btn-sm fw-bold w-100" data-toggle="modal"
                             data-target="#exampleModal">reserver</button></td>
-
-
                 </tr>
             </tbody>
         </table>
