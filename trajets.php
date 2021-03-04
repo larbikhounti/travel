@@ -134,7 +134,9 @@ include "./static/navbar.php";
                     <div class="fullname  col-md-12 container row ">
                         <div class="name col-md-12 ">
                             <label class="fw-bold" for="cardnumber">numéro de carte</label>
-                            <input class="form-control" type="number" name="cardnumber" id="cardnumber" patter="^4[0-9]{12}(?:[0-9]{3})?$ | ^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$"  required>
+                            <input class="form-control" type="number" name="cardnumber" id="cardnumber"
+                                patter="^4[0-9]{12}(?:[0-9]{3})?$ | ^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$"
+                                required>
                         </div>
                         <div class="lastname col-md-6 ">
                             <label class="fw-bold" for="lastname">prénom</label>
@@ -152,17 +154,39 @@ include "./static/navbar.php";
                             <label class="fw-bold" for="cvv">cvv</label>
                             <input class="form-control" type="number" name="cvv" id="cvv" required>
                         </div>
-                       
+
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary cancelcard" data-dismiss="modal">annuler</button>
-                    <button type="button" class="btn btn-success ">validé</button>
+                    <button type="button" class="btn btn-success  valide ">validé</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal of pdf generator -->
+    <div class="modal fade" id="mypdf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">imprimer</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                    <h3>votre document et pret de imprimer</h3>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+
+                    <button type="button" class="btn btn-success ">imprimer <i class="fas fa-file-pdf"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

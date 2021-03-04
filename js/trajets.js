@@ -20,4 +20,10 @@ $(document).ready(function(){
         $("#card").modal("hide");
 
     })
+    $(".valide").click(() => {
+        $("#card").modal("hide");
+        $("#mypdf").modal({backdrop: 'static', keyboard: false});
+        $("#mypdf").modal("show");
+
+    })
 });
