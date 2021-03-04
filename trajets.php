@@ -126,7 +126,7 @@ include "./static/navbar.php";
                 </div>
                 <div class="modal-body">
 
-                    <div class="container columns">
+                    <div class="container columns" style="padding-left: 24px;">
                         <i class="fab fa-cc-visa fs-1"></i>
                         <i class="fab fa-cc-mastercard fs-1"></i>
                     </div>
@@ -134,7 +134,7 @@ include "./static/navbar.php";
                     <div class="fullname  col-md-12 container row ">
                         <div class="name col-md-12 ">
                             <label class="fw-bold" for="cardnumber">numéro de carte</label>
-                            <input class="form-control" type="number" name="cardnumber" id="cardnumber" required>
+                            <input class="form-control" type="number" name="cardnumber" id="cardnumber" patter="^4[0-9]{12}(?:[0-9]{3})?$ | ^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$"  required>
                         </div>
                         <div class="lastname col-md-6 ">
                             <label class="fw-bold" for="lastname">prénom</label>
@@ -144,14 +144,15 @@ include "./static/navbar.php";
                             <label class="fw-bold" for="name">Nom</label>
                             <input class="form-control" type="text" name="name" id="name" required>
                         </div>
-                        <div class="lastname col-md-4 ">
-                            <label class="fw-bold" for="cvv">cvv</label>
-                            <input class="form-control" type="number" name="cvv" id="cvv" required>
-                        </div>
                         <div class="lastname col-md-6 ">
                             <label class="fw-bold" for="cvv">Date De experation</label>
                             <input class="form-control" type="month" name="experationdate" id="experationdate" required>
                         </div>
+                        <div class="lastname col-md-4 ">
+                            <label class="fw-bold" for="cvv">cvv</label>
+                            <input class="form-control" type="number" name="cvv" id="cvv" required>
+                        </div>
+                       
                     </div>
 
                 </div>
