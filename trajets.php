@@ -13,13 +13,13 @@ include "./static/navbar.php";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./css/acc.css">
     <title>Trajets</title>
 </head>
 
 <body>
     <?php echo ($navBar); ?>
-
     <form action="" method="post" class="travel-times-from container  mt-5">
         <div class="fullname col-md-12 container  ">
             <h1>Rechercher Trajets</h1>
@@ -51,7 +51,6 @@ include "./static/navbar.php";
                 </div>
             </div>
         </div>
-
 
     </form>
     <div class="table-of-times container text-center">
@@ -94,7 +93,7 @@ include "./static/navbar.php";
     </div>
 
 
-    <!-- Modal -->
+    <!-- Modal of reservation detail -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -112,11 +111,58 @@ include "./static/navbar.php";
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary annuler" data-dismiss="modal">annuler</button>
-                    <button type="button" class="btn btn-success">Reserver</button>
+                    <button type="button" class="btn btn-success pay">Payée</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Modal of credit card -->
+    <div class="modal fade" id="card" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ajouter votre credit card</h5>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container columns">
+                        <i class="fab fa-cc-visa fs-1"></i>
+                        <i class="fab fa-cc-mastercard fs-1"></i>
+                    </div>
+
+                    <div class="fullname  col-md-12 container row ">
+                        <div class="name col-md-12 ">
+                            <label class="fw-bold" for="cardnumber">numéro de carte</label>
+                            <input class="form-control" type="number" name="cardnumber" id="cardnumber" required>
+                        </div>
+                        <div class="lastname col-md-6 ">
+                            <label class="fw-bold" for="lastname">prénom</label>
+                            <input class="form-control" type="text" name="lastname" id="lastname" required>
+                        </div>
+                        <div class="name col-md-6 ">
+                            <label class="fw-bold" for="name">Nom</label>
+                            <input class="form-control" type="text" name="name" id="name" required>
+                        </div>
+                        <div class="lastname col-md-4 ">
+                            <label class="fw-bold" for="cvv">cvv</label>
+                            <input class="form-control" type="number" name="cvv" id="cvv" required>
+                        </div>
+                        <div class="lastname col-md-6 ">
+                            <label class="fw-bold" for="cvv">Date De experation</label>
+                            <input class="form-control" type="month" name="experationdate" id="experationdate" required>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary cancelcard" data-dismiss="modal">annuler</button>
+                    <button type="button" class="btn btn-success ">validé</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
@@ -125,13 +171,8 @@ include "./static/navbar.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
     </script>
-    <script type="text/javascript">
-    $(".reserver").click(() => {
-        $("#exampleModal").modal("show");
-    })
-    $(".annuler").click(() => {
-        $("#exampleModal").modal("hide");
-    })
+
+    <script src="./js/trajets.js">
     </script>
 
 
