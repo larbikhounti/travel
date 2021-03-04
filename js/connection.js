@@ -12,6 +12,7 @@ $(document).ready(function () {
           
           if (data === "1") {
             $("#success").modal("show");
+            localStorage.setItem("email",e.target[0].value);
           } else {
           //  $("#faild").modal("show");
           console.log("failed");

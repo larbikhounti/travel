@@ -3,6 +3,13 @@ session_start();
 // author : mohamed khounti
 include "./static/navbar.php";
 
+if(isset($_SESSION["nom"]) && isset($_SESSION["prenom"])){
+    $nom = $_SESSION["nom"];
+    $prenom = $_SESSION["prenom"];
+}else{
+    $nom = '';
+    $prenom = '';
+}
 
 ?>
 <!DOCTYPE html>
@@ -58,7 +65,7 @@ include "./static/navbar.php";
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <h5>bienvenue <h5><h3><?php echo isset($_SESSION["nom"]) && isset($_SESSION["prenom"]) ? $_SESSION["nom"]." ".$_SESSION["prenom"] :'';  ?></h3>
+                        <h5>bienvenue <h5><h3><?php echo $nom . " ". $prenom;   ?></h3>
                     </div>
                 </div>
                 <div class="modal-footer text-center">
@@ -78,6 +85,12 @@ include "./static/navbar.php";
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
     </script>
     <script src="./js/connection.js"></script>
+    <script type="text/javascript">
+  
+      
+    
+   
+    </script>
 </body>
 
 </html>

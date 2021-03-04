@@ -33,11 +33,11 @@ class dataset
       $myquery->execute();
     
       if ($myquery->rowcount() > 0) {
-        $ho = $myquery->fetch(PDO::FETCH_ASSOC);
+        $data = $myquery->fetch(PDO::FETCH_ASSOC);
         session_start();
-        $_SESSION["email"] = $ho["email"];
-        $_SESSION["nom"] = $ho["nom"];
-        $_SESSION["prenom"] = $ho["prenom"];
+        $_SESSION["email"] = $data["email"];
+        $_SESSION["nom"] = $data["nom"];
+        $_SESSION["prenom"] = $data["prenom"];
         return 1;
         //return 1;
       } else {

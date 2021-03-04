@@ -1,7 +1,12 @@
 $(document).ready(function () {
   //if click on reserver button show modal
   $(".reserver").click(() => {
-    $("#exampleModal").modal("show");
+    if(localStorage.getItem("email")){
+      console.log(localStorage.getItem("email"))
+     $("#exampleModal").modal("show");
+    }else{
+      window.location = "../travel/inscreption.php"
+    }
   });
   // if click on annuler hide modal
   $(".annuler").click(() => {
