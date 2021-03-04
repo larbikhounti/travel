@@ -1,6 +1,9 @@
 <?php 
 // author : mohamed khounti
-
+session_start();
+if(! isset($_SESSION["email"])){
+    echo "wtf";
+}
 include "./static/navbar.php";
 ?>
 
