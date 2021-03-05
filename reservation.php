@@ -5,6 +5,9 @@ session_start();
 if (!isset($_SESSION["email"])) {
     //  header("location : ..travel/")
 }
+
+
+
 include "./static/navbar.php";
 include "./functions/dataset.php";
 $connection = new dataset();
@@ -26,11 +29,17 @@ $total =  $connection->getTotalofMoney($_SESSION["email"]);
     <title>Trajets</title>
 </head>
 
-<body>
+<body class="text-center">
     <?php echo ($navBar); ?>
-
-
+    
+    <button onclick="myprint()" class="btn btn-warning mt-5"><img src="https://www.pngitem.com/pimgs/m/499-4997293_pdf-file-icon-png-transparent-png.png" width="50px" height="50px" alt="" srcset=""></button>
     <div class="table-of-times container text-center mt-5">
+    <div>
+    <label class="fw-bold">nom et prenom :</label>
+     <h6>mohamed khounti</h6>
+     <label class="fw-bold">email :</label>
+     <h6><?php  echo $_SESSION["email"] ?></h6>
+    </div>
         <h1>Mon Reservations</h1>
         <table class="table table-hover mt-4">
             <thead>
@@ -92,6 +101,14 @@ $total =  $connection->getTotalofMoney($_SESSION["email"]);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
     </script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script type="text/javascript">
+    var element = document.querySelector('.table-of-times');
+    function myprint(){
+        html2pdf(element);
+    }
+    
+</script>
 </body>
 
 </html>
