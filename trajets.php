@@ -20,14 +20,14 @@ include "./static/navbar.php";
 
 <body>
     <?php echo ($navBar); ?>
-    <form action="" method="post" class="travel-times-from container  mt-5">
+    <form  method="post" class="travel-times-form container  mt-5">
         <div class="fullname col-md-12 container  ">
             <h1>Rechercher Trajets</h1>
             <div class="col-md-12 container row">
                 <div class="Ville-Depart col-md-6">
                     <label class="fw-bold" for="Email">Ville Depart</label>
                     <select class="form-select" aria-label="Default select example" required>
-                        <option value="1">tanger</option>
+                        <option value="tanger">tanger</option>
                         <option value="2">meknes</option>
                         <option value="3">taza</option>
                     </select>
@@ -35,19 +35,15 @@ include "./static/navbar.php";
                 <div class="ville-arrive col-md-6">
                     <label class="fw-bold" for="password">Ville d'arrive</label>
                     <select class="form-select" aria-label="Default select example" required>
-                        <option value="1">casablanca</option>
+                        <option value="casablanca">casablanca</option>
                         <option value="2">rabat</option>
                         <option value="3">fes</option>
                     </select>
                 </div>
             </div>
             <div class="col-md-12 container row">
-                <div class="submit col-md-6 p-4">
-                    <label for="date">Date De Voyage</label>
-                    <input class="form-control" type="date" name="date" id="date" required>
-                </div>
                 <div class="submit col-md-6 p-5">
-                    <button class="btn btn-primary w-100" type="submit">cherche</button>
+                    <button class="btn btn-primary w-100" value="submit" type="submit">cherche</button>
                 </div>
             </div>
         </div>
@@ -67,26 +63,8 @@ include "./static/navbar.php";
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>10:15</td>
-                    <td>18:30</td>
-                    <td>tanger</td>
-                    <td>casablanca</td>
-                    <td>155 DH</td>
-                    <td><button class="btn btn-success btn-sm fw-bold w-100 reserver" data-toggle="modal"
-                            data-target="#exampleModal">reserver</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>10:15</td>
-                    <td>18:30</td>
-                    <td>tanger</td>
-                    <td>casablanca</td>
-                    <td>155 DH</td>
-                    <td><button class="btn btn-success btn-sm fw-bold w-100" data-toggle="modal"
-                            data-target="#exampleModal">reserver</button></td>
-                </tr>
+            
+            
             </tbody>
         </table>
 

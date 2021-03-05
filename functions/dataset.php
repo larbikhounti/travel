@@ -48,4 +48,18 @@ class dataset
     }
    
   }
+
+  public function getTravels($cityStart,$cityEnd){
+      $myquery =  $this->conn->prepare("select * from voyage where  villeDepart = :cityStart AND villeDarrivee = :cityEnd ");
+      $myquery->bindParam(":cityStart", $cityStart);
+      $myquery->bindParam(":cityEnd", $cityEnd);
+      $myquery->execute();
+      if ($myquery->rowcount() > 0) {
+        $data = $myquery->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+      } else {
+        return 0;
+      }
+  }
+
 }

@@ -2,7 +2,7 @@
 // author : mohamed khounti
 session_start();
 if(! isset($_SESSION["email"])){
-    echo "wtf";
+  //  header("location : ..travel/")
 }
 include "./static/navbar.php";
 ?>
