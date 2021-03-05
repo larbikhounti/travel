@@ -9,6 +9,7 @@ include "./static/navbar.php";
 include "./functions/dataset.php";
 $connection = new dataset();
 $result =  $connection->allReservations($_SESSION["email"]);
+$total =  $connection->getTotalofMoney($_SESSION["email"]);
 //print_r($result);
 ?>
 
@@ -70,6 +71,19 @@ $result =  $connection->allReservations($_SESSION["email"]);
                 ?>
 
             </tbody>
+                 <tfoot>
+                 <tr>
+                                    <th ></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="fw-bold">TOTAL</td>
+                                    <td class="fw-bolder"><?php echo $total["prixVoyage"] ?> DH</td>
+                                
+                                </tr>
+                </tfoot>
         </table>
     </div>
 

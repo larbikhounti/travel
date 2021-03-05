@@ -88,4 +88,17 @@ class dataset
       }  
    
   }
+  public function getTotalofMoney($email)
+  {
+      $myquery =  $this->conn->prepare("SELECT sum(prixVoyage) as prixVoyage from voyageur,voyage,bilet where voyageur.email = bilet.email AND voyage.codeVoyage = bilet.codeVoyage AND voyageur.email = :email");
+      $myquery->bindParam(":email", $email);
+      $myquery->execute();
+      if ($myquery->rowcount() > 0) {
+        $data = $myquery->fetch(PDO::FETCH_ASSOC);
+        return $data;
+      } else {
+        return 0;
+      }  
+   
+  }
 }
