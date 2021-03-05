@@ -81,7 +81,7 @@ include "./static/navbar.php";
                 </div>
                 <div class="modal-body">
                     <label for="numberofbillet" class="fw-900">Nombre De billet</label>
-                    <select class="form-select" aria-label="Default select example" required>
+                    <select class="form-select  numberofbilet" aria-label="Default select example" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

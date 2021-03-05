@@ -1,6 +1,7 @@
 <?php 
 // author : mohamed khounti
 session_start();
+include "./functions/dataset.php";
 if(! isset($_SESSION["email"])){
   //  header("location : ..travel/")
 }

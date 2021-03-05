@@ -38,6 +38,7 @@ class dataset
         $_SESSION["email"] = $data["email"];
         $_SESSION["nom"] = $data["nom"];
         $_SESSION["prenom"] = $data["prenom"];
+        $_SESSION["telephone"] = $data["telephone"];
         return 1;
         //return 1;
       } else {
@@ -63,15 +64,17 @@ class dataset
   }
   public function addTicket($codeVoyage, $email, $telephone)
   {
-    $myquery =  $this->conn->prepare("insert into bilet (codeVoyage,email,telephone) values (:codeVoyage,:email,:telephone) ");
-    $myquery->bindParam(":codeVoyage", $codeVoyage);
-    $myquery->bindParam(":email", $email);
-    $myquery->bindParam(":telephone", $telephone);
-    $myquery->execute();
-    if ($myquery->execute()) {
-      return 1;
-    } else {
-      return 0;
-    }
+  
+      $myquery =  $this->conn->prepare("insert into bilet (codeVoyage,email,telephone) values (:codeVoyage,:email,:telephone) ");
+      $myquery->bindParam(":codeVoyage", $codeVoyage);
+      $myquery->bindParam(":email", $email);
+      $myquery->bindParam(":telephone", $telephone);
+      if ($myquery->execute()) {
+        return 1;
+      } else {
+        return 0;
+      }
+    
+   
   }
 }
