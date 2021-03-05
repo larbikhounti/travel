@@ -76,6 +76,27 @@ if(isset($_SESSION["nom"]) && isset($_SESSION["prenom"])){
             </div>
         </div>
     </div>
+    <!-- Modal of faild -->
+    <div class="modal fade" id="faild" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">info</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h5>informations incorrectes <h5>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+
+                    <button type="button" class="btn btn-danger ressayer ">ressayer<i
+                            class="fas fa-sign-in-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"

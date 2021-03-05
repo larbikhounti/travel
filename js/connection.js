@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $(".ressayer").click(()=>{
+    $("#faild").modal("hide");
+  })
+  
     $(".sign-in-form").submit((e) => {
       e.preventDefault();
       $.post(
@@ -14,8 +18,7 @@ $(document).ready(function () {
             $("#success").modal("show");
             localStorage.setItem("email",e.target[0].value);
           } else {
-          //  $("#faild").modal("show");
-          console.log("failed");
+          $("#faild").modal("show");
           }
           
        
