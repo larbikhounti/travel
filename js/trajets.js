@@ -110,6 +110,12 @@ $(document).ready(function () {
         },
         (data, statu) => {
           console.log(data);
+          if(data){
+            $("#mypdf").modal("hide");
+            document.location = "../travel/reservation.php";
+          }else{
+
+          }
         }
       );
     });

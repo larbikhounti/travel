@@ -20,7 +20,7 @@ include "./static/navbar.php";
 
 <body>
     <?php echo ($navBar); ?>
-    <form  method="post" class="travel-times-form container  mt-5">
+    <form method="post" class="travel-times-form container  mt-5">
         <div class="fullname col-md-12 container  ">
             <h1>Rechercher Trajets</h1>
             <div class="col-md-12 container row">
@@ -63,8 +63,8 @@ include "./static/navbar.php";
                 </tr>
             </thead>
             <tbody>
-            
-            
+
+
             </tbody>
         </table>
 
@@ -153,13 +153,18 @@ include "./static/navbar.php";
                     <h5 class="modal-title" id="exampleModalLabel">imprimer</h5>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
-                    <h3>votre document et pret de imprimer</h3>
+                    <div class="container column">
+                        <span class="spinner-border spinner-border-sm text-success" role="status" aria-hidden="true"></span>
+                        <h5 >generation de bellits</h5>
+                        <div>
+
+                        </div>
+
                     </div>
                 </div>
                 <div class="modal-footer text-center">
 
-                    <button type="button" class="btn btn-success ">imprimer <i class="fas fa-file-pdf"></i></button>
+                    
                 </div>
             </div>
         </div>

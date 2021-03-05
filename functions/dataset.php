@@ -64,7 +64,6 @@ class dataset
   }
   public function addTicket($codeVoyage, $email, $telephone)
   {
-  
       $myquery =  $this->conn->prepare("insert into bilet (codeVoyage,email,telephone) values (:codeVoyage,:email,:telephone) ");
       $myquery->bindParam(":codeVoyage", $codeVoyage);
       $myquery->bindParam(":email", $email);
@@ -73,8 +72,20 @@ class dataset
         return 1;
       } else {
         return 0;
-      }
-    
+      }  
+   
+  }
+  public function allReservations($email)
+  {
+      $myquery =  $this->conn->prepare("SELECT * from voyageur,voyage,bilet where voyageur.email = bilet.email AND voyage.codeVoyage = bilet.codeVoyage AND voyageur.email = :email");
+      $myquery->bindParam(":email", $email);
+      $myquery->execute();
+      if ($myquery->rowcount() > 0) {
+        $data = $myquery->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+      } else {
+        return 0;
+      }  
    
   }
 }

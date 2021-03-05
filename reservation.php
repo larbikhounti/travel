@@ -1,11 +1,15 @@
 <?php 
 // author : mohamed khounti
 session_start();
-include "./functions/dataset.php";
+
 if(! isset($_SESSION["email"])){
   //  header("location : ..travel/")
 }
 include "./static/navbar.php";
+include "./functions/dataset.php";
+$connection = new dataset();
+$result =  $connection->allReservations($_SESSION["email"]);
+//print_r($result);
 ?>
 
 <!DOCTYPE html>
@@ -31,35 +35,36 @@ include "./static/navbar.php";
         <table class="table table-hover mt-4">
             <thead>
                 <tr>
-                    <th scope="col">code Voyage</th>
+                    
+                    <th scope="col">number bellit</th>
+                    <th scope="col">code voyage</th>
                     <th scope="col">heure depart</th>
                     <th scope="col">heure arrivee</th>
                     <th scope="col">ville depart</th>
                     <th scope="col">ville arrivee</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">la date</th>
                     <th scope="col">prix</th>
-                    <th scope="col"></th>
+                    
                 </tr>
             </thead>
             <tbody>
+            <?php
+            foreach ($result as $key ) {
+                echo " 
                 <tr>
-                    <th scope="row">1</th>
-                    <td>10:15</td>
-                    <td>18:30</td>
-                    <td>tanger</td>
-                    <td>casablanca</td>
-                    <td>155 DH</td>
-                    <td><button class="btn btn-danger btn-sm fw-bold w-100">Annuler</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>10:15</td>
-                    <td>18:30</td>
-                    <td>tanger</td>
-                    <td>casablanca</td>
-                    <td>155 DH</td>
-                    <td><button class="btn btn-danger btn-sm fw-bold w-100">Annuler</button></td>
-                </tr>
+                    <th scope='row'>".$key["numbille"]."</th>
+                    <td>".$key["codeVoyage"]."</td>
+                    <td>".$key["heureDepart"]."</td>
+                    <td>".$key["heureDarrivee"]."</td>
+                    <td>".$key["villeDepart"]."</td>
+                    <td>".$key["villeDarrivee"]."</td>
+                    <td>".$key["datebilet"]."</td>
+                    <td>".$key["prixVoyage"]." DH</td>
+                   
+                </tr>";
+            }
+            ?> 
+             
             </tbody>
         </table>
     </div>
